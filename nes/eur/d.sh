@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-source sources/nes.txt
+source sources/nes.sh
 ROM=~/.cache/nesrom.zip
 NES="fceux --pal 1 $ROM"
 
