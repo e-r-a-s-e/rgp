@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# This file is not populated! Please put your RGP server link in this format (ignoring everything that isn't in quotes)
+#
+# "https://domain.tld/path/to/roms"
+#
+# DO NOT HAVE A SLASH AT THE END!!!
+#
+
+DLNES=link
