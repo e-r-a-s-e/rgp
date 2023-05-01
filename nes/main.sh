@@ -8,9 +8,7 @@ BACKTITLE="Build 23.04"
 TITLE="Retro Game Pass"
 MENU="What region:"
 
-OPTIONS=(1 "Europe"
-         2 "Japan"
-         3 "North America")
+OPTIONS=(1 "Europe")
 
 CHOICE=$(dialog --clear \
 				--backtitle "$BACKTITLE" \
@@ -25,10 +23,4 @@ case $CHOICE in
 	1)
 		bash nes/eur/main.sh
 		;;
-	2)
-		bash nes/jpn/main.sh
-		;;
-    3)
-        bash nes/usa/main.sh
-        ;;
 esac

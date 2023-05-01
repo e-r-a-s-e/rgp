@@ -12,7 +12,9 @@ BACKTITLE="Build 23.04"
 TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
-OPTIONS=()
+OPTIONS=(1 "Operation Wolf" 
+         2 "Over Horizon" 
+         3 "Back to EUR")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -24,7 +26,14 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/" -O $ROM
+        wget "$IA/https://archive.org/download/No-Intro-Collection_2016-01-03_Fixed/Nintendo%20-%20Nintendo%20Entertainment%20System.zip/Operation%20Wolf%20%28Europe%29.zip" -O $ROM
         $NES
+        ;;
+    2)
+        wget "$IA/https://archive.org/download/No-Intro-Collection_2016-01-03_Fixed/Nintendo%20-%20Nintendo%20Entertainment%20System.zip/Over%20Horizon%20%28Europe%29.zip" -O $ROM
+        $NES
+        ;;
+    3)
+        bash nes/eur/main.sh
         ;;
 esac
