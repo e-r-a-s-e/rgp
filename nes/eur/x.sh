@@ -2,14 +2,8 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
+source variables.sh
 
-HEIGHT=19
-WIDTH=76
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "Xevious"
@@ -25,7 +19,7 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/Xevious%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Xevious%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     2)

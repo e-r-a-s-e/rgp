@@ -2,14 +2,8 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
+source variables.sh
 
-HEIGHT=19
-WIDTH=76
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "Hammerin' Harry" 
@@ -32,35 +26,35 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/Hammerin%27%20Harry%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Hammerin%27%20Harry%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     2)
-        wget "$IA/High%20Speed%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/High%20Speed%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     3)
-        wget "$IA/Hogan%27s%20Alley%20%28World%29.zip" -O $ROM
+        wget "$DLNES/Hogan%27s%20Alley%20%28World%29.zip" -O $ROM
         $NES
         ;;
     4)
-        wget "$IA/Home%20Alone%202%20-%20Lost%20in%20New%20York%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Home%20Alone%202%20-%20Lost%20in%20New%20York%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     5)
-        wget "$IA/Hook%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Hook%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     6)
-        wget "$IA/Hoops%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Hoops%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     7)
-        wget "$IA/Hudson%20Hawk%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Hudson%20Hawk%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     8)
-        wget "$IA/Hunt%20for%20Red%20October%2C%20The%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Hunt%20for%20Red%20October%2C%20The%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     9)

@@ -2,14 +2,7 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
-
-HEIGHT=19
-WIDTH=76
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
+source variables.sh
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "Yoshi's Cookie"
@@ -25,7 +18,7 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/Yoshi%27s%20Cookie%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Yoshi%27s%20Cookie%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     2)

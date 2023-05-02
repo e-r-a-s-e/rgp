@@ -8,3 +8,6 @@
 #
 
 DLNES=link
+
+# Homebrew
+HBNES=http://erase.icu/nes

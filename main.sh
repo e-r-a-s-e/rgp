@@ -8,11 +8,7 @@
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # 
 
-HEIGHT=19
-WIDTH=65
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
+source variables.sh
 MENU="Choose the Console you'd like to play:"
 
 OPTIONS=(1 "Nintendo - Nintendo Entertainment System")

@@ -2,14 +2,8 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
+source variables.sh
 
-HEIGHT=19
-WIDTH=76
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "Danny Sullivan's Indy Heat" 
@@ -49,103 +43,103 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/Danny%20Sullivan%27s%20Indy%20Heat%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Danny%20Sullivan%27s%20Indy%20Heat%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     2)
-        wget "$IA/Darkman%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Darkman%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     3)
-        wget "$IA/Darkwing%20Duck%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Darkwing%20Duck%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     4)
-        wget "$IA/David%20Crane%27s%20A%20Boy%20and%20His%20Blob%20-%20Trouble%20on%20Blobolonia%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/David%20Crane%27s%20A%20Boy%20and%20His%20Blob%20-%20Trouble%20on%20Blobolonia%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     5)
-        wget "$IA/Days%20of%20Thunder%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Days%20of%20Thunder%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     6)
-        wget "$IA/Defender%20of%20the%20Crown%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Defender%20of%20the%20Crown%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     7)
-        wget "$IA/Devil%20World%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Devil%20World%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     8)
-        wget "$IA/Die%20Hard%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Die%20Hard%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     9)
-        wget "$IA/Digger%20T.%20Rock%20-%20The%20Legend%20of%20the%20Lost%20City%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Digger%20T.%20Rock%20-%20The%20Legend%20of%20the%20Lost%20City%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/Donkey%20Kong%20%28World%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/Donkey%20Kong%20%28World%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     11)
-        wget "$IA/Donkey%20Kong%203%20%28World%29.zip" -O $ROM
+        wget "$DLNES/Donkey%20Kong%203%20%28World%29.zip" -O $ROM
         $NES
         ;;
     12)
-        wget "$IA/Donkey%20Kong%20Classics%20%28USA%2C%20Europe%29.zip" -O $ROM
+        wget "$DLNES/Donkey%20Kong%20Classics%20%28USA%2C%20Europe%29.zip" -O $ROM
         $NES
         ;;
     13)
-        wget "$IA/Donkey%20Kong%20Jr.%20%28World%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/Donkey%20Kong%20Jr.%20%28World%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     14)
-        wget "$IA/Donkey%20Kong%20Jr.%20Math%20%28USA%2C%20Europe%29.zip" -O $ROM
+        wget "$DLNES/Donkey%20Kong%20Jr.%20Math%20%28USA%2C%20Europe%29.zip" -O $ROM
         $NES
         ;;
     15)
-        wget "$IA/Double%20Dragon%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Double%20Dragon%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     16)
-        wget "$IA/Double%20Dragon%20II%20-%20The%20Revenge%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Double%20Dragon%20II%20-%20The%20Revenge%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     17)
-        wget "$IA/Double%20Dragon%20III%20-%20The%20Sacred%20Stones%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Double%20Dragon%20III%20-%20The%20Sacred%20Stones%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     18)
-        wget "$IA/Double%20Dribble%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Double%20Dribble%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     19)
-        wget "$IA/Dr.%20Mario%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Dr.%20Mario%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     20)
-        wget "$IA/Dragon%27s%20Lair%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Dragon%27s%20Lair%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     21)
-        wget "$IA/Dropzone%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Dropzone%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     22)
-        wget "$IA/Duck%20Hunt%20%28World%29.zip" -O $ROM
+        wget "$DLNES/Duck%20Hunt%20%28World%29.zip" -O $ROM
         $NES
         ;;
     23)
-        wget "$IA/DuckTales%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/DuckTales%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     24)
-        wget "$IA/DuckTales%202%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/DuckTales%202%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     25)
-        wget "$IA/Dynablaster%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Dynablaster%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     26)

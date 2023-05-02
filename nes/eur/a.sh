@@ -2,14 +2,8 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
+source variables.sh
 
-HEIGHT=19
-WIDTH=65
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "10-Yard Fight"
@@ -45,103 +39,102 @@ CHOICE=$(dialog --clear \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
-
 clear
 case $CHOICE in
     1)
-        wget "$IA/10-Yard%20Fight%20%28USA%2C%20Europe%29.zip" -O $ROM
+        wget "$DLNES/10-Yard%20Fight%20%28USA%2C%20Europe%29.zip" -O $ROM
         $NES
         ;;
     2)
-        wget "$IA/Action%20in%20New%20York%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Action%20in%20New%20York%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     3)
-        wget "$IA/Addams%20Family%2C%20The%20%28Europe%29%20%28En%2CFr%2CDe%29.zip" -O $ROM
+        wget "$DLNES/Addams%20Family%2C%20The%20%28Europe%29%20%28En%2CFr%2CDe%29.zip" -O $ROM
         $NES
         ;;
     4)
-        wget "$IA/Addams%20Family%2C%20The%20-%20Pugsley%27s%20Scavenger%20Hunt%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Addams%20Family%2C%20The%20-%20Pugsley%27s%20Scavenger%20Hunt%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     5)
-        wget "$IA/Adventure%20Island%20Classic%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Adventure%20Island%20Classic%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     6)
-        wget "$IA/Adventure%20Island%20Part%20II%2C%20The%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Adventure%20Island%20Part%20II%2C%20The%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     7)
-        wget "$IA/Adventures%20in%20the%20Magic%20Kingdom%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Adventures%20in%20the%20Magic%20Kingdom%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     8)
-        wget "$IA/Adventures%20of%20Bayou%20Billy%2C%20The%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Adventures%20of%20Bayou%20Billy%2C%20The%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     9)
-        wget "$IA/Adventures%20of%20Lolo%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Adventures%20of%20Lolo%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/Adventures%20of%20Lolo%202%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Adventures%20of%20Lolo%202%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     11)
-        wget "$IA/Adventures%20of%20Lolo%203%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Adventures%20of%20Lolo%203%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     12)
-        wget "$IA/Adventures%20of%20Rad%20Gravity%2C%20The%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Adventures%20of%20Rad%20Gravity%2C%20The%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     13)
-        wget "$IA/Air%20Fortress%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Air%20Fortress%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     14)
-        wget "$IA/Airwolf%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Airwolf%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     15)
-        wget "$IA/Aladdin%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Aladdin%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     16)
-        wget "$IA/Alfred%20Chicken%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Alfred%20Chicken%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     17)
-        wget "$IA/Alien%203%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Alien%203%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     18)
-        wget "$IA/Alpha%20Mission%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Alpha%20Mission%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     19)
-        wget "$IA/Anticipation%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Anticipation%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     20)
-        wget "$IA/Arch%20Rivals%20-%20A%20Basketbrawl%21%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Arch%20Rivals%20-%20A%20Basketbrawl%21%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     21)
-        wget "$IA/Asterix%20%28Europe%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.zip" -O $ROM
+        wget "$DLNES/Asterix%20%28Europe%29%20%28En%2CFr%2CDe%2CEs%2CIt%29.zip" -O $ROM
         $NES
         ;;
     22)
-        wget "$IA/Astyanax%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Astyanax%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     23)
-        wget "$IA/Athletic%20World%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Athletic%20World%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     24)
-        wget "$IA/Attack%20of%20the%20Killer%20Tomatoes%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Attack%20of%20the%20Killer%20Tomatoes%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     25)

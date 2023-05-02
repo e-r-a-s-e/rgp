@@ -1,14 +1,11 @@
 #!/bin/bash
 #
 
-HEIGHT=19
-WIDTH=65
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
+source variables.sh
 MENU="What region:"
 
-OPTIONS=(1 "Europe")
+OPTIONS=(1 "Europe"
+		 99 "Homebrew")
 
 CHOICE=$(dialog --clear \
 				--backtitle "$BACKTITLE" \
@@ -22,5 +19,8 @@ clear
 case $CHOICE in
 	1)
 		bash nes/eur/main.sh
+		;;
+	99)
+		bash nes/hb/main.sh
 		;;
 esac

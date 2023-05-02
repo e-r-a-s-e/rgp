@@ -1,11 +1,8 @@
 #!/bin/bash
 #
 
-HEIGHT=19
-WIDTH=65
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
+source variables.sh
+
 MENU="Letter:"
 
 OPTIONS=(1 "A"
@@ -35,15 +32,14 @@ OPTIONS=(1 "A"
          25 "Y"
          26 "Z"
          27 "back to region")
-
+         
 CHOICE=$(dialog --clear \
-				--backtitle "$BACKTITLE" \
-				--title "$TITLE" \
-				--menu "$MENU" \
-				$HEIGHT $WIDTH $CHOICE_HEIGHT \
-				"${OPTIONS[@]}" \
-				2>&1 >/dev/tty)
-
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
 clear
 case $CHOICE in
 	1)
@@ -95,7 +91,8 @@ case $CHOICE in
         bash nes/eur/p.sh
         ;;
     17)
-        bash nes/eur/q.sh
+        dialog --title "Error" --msgbox "There are no games that start with Q for PAL NES games" 19 65
+        bash nes/eur/main.sh
         ;;
     18)
         bash nes/eur/r.sh

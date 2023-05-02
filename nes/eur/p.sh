@@ -2,14 +2,8 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
+source variables.sh
 
-HEIGHT=19
-WIDTH=76
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "P.O.W. - Prisoners of War" 
@@ -43,79 +37,79 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/P.O.W.%20-%20Prisoners%20of%20War%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/P.O.W.%20-%20Prisoners%20of%20War%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     2)
-        wget "$IA/Pac-Man%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Pac-Man%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     3)
-        wget "$IA/Panic%20Restaurant%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Panic%20Restaurant%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     4)
-        wget "$IA/Paperboy%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Paperboy%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     5)
-        wget "$IA/Paperboy%202%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Paperboy%202%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     6)
-        wget "$IA/Parasol%20Stars%20-%20Rainbow%20Islands%20II%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Parasol%20Stars%20-%20Rainbow%20Islands%20II%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     7)
-        wget "$IA/Parodius%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Parodius%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     8)
-        wget "$IA/Phantom%20Air%20Mission%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Phantom%20Air%20Mission%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     9)
-        wget "$IA/Pin%20Bot%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Pin%20Bot%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/Pinball%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/Pinball%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     11)
-        wget "$IA/Pirates%21%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Pirates%21%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     12)
-        wget "$IA/Popeye%20%28World%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/Popeye%20%28World%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     13)
-        wget "$IA/Power%20Blade%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Power%20Blade%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     14)
-        wget "$IA/Prince%20of%20Persia%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Prince%20of%20Persia%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     15)
-        wget "$IA/Pro%20Wrestling%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Pro%20Wrestling%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     16)
-        wget "$IA/Probotector%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Probotector%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     17)
-        wget "$IA/Probotector%20II%20-%20Return%20of%20the%20Evil%20Forces%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Probotector%20II%20-%20Return%20of%20the%20Evil%20Forces%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     18)
-        wget "$IA/Punch-Out%21%21%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Punch-Out%21%21%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     19)
-        wget "$IA/Puzznic%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Puzznic%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     20)

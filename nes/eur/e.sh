@@ -2,14 +2,8 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
+source variables.sh
 
-HEIGHT=19
-WIDTH=76
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "Eliminator Boat Duel" 
@@ -28,19 +22,19 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/Eliminator%20Boat%20Duel%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Eliminator%20Boat%20Duel%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     1)
-        wget "$IA/Elite%20%28Europe%29%20%28En%2CFr%2CDe%29.zip" -O $ROM
+        wget "$DLNES/Elite%20%28Europe%29%20%28En%2CFr%2CDe%29.zip" -O $ROM
         $NES
         ;;
     1)
-        wget "$IA/Eric%20Cantona%20Football%20Challenge%20-%20Goal%21%202%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Eric%20Cantona%20Football%20Challenge%20-%20Goal%21%202%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     1)
-        wget "$IA/Excitebike%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Excitebike%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     1)

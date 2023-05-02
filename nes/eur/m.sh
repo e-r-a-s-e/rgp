@@ -2,14 +2,8 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
+source variables.sh
 
-HEIGHT=19
-WIDTH=76
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "Mach Rider" 
@@ -46,91 +40,91 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/htMach%20Rider%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMach%20Rider%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     2)
-        wget "$IA/htManiac%20Mansion%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htManiac%20Mansion%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     3)
-        wget "$IA/htMarble%20Madness%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMarble%20Madness%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     4)
-        wget "$IA/htMario%20%26%20Yoshi%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMario%20%26%20Yoshi%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     5)
-        wget "$IA/htMario%20Bros.%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/htMario%20Bros.%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     6)
-        wget "$IA/htMario%20Bros.%20Classic%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMario%20Bros.%20Classic%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     7)
-        wget "$IA/htMario%20Is%20Missing%21%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMario%20Is%20Missing%21%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     8)
-        wget "$IA/htMcDonaldland%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMcDonaldland%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     9)
-        wget "$IA/htMega%20Man%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMega%20Man%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMega%20Man%202%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMega%20Man%202%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMega%20Man%203%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/htMega%20Man%203%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMega%20Man%204%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMega%20Man%204%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMega%20Man%205%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMega%20Man%205%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMetal%20Gear%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMetal%20Gear%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMetroid%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMetroid%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMicro%20Machines%20%28Europe%29%20%28Unl%29.zip" -O $ROM
+        wget "$DLNES/htMicro%20Machines%20%28Europe%29%20%28Unl%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMighty%20Bomb%20Jack%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMighty%20Bomb%20Jack%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMighty%20Final%20Fight%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMighty%20Final%20Fight%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
-        wget "$IA/htMike%20Tyson%27s%20Punch-Out%21%21%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/htMike%20Tyson%27s%20Punch-Out%21%21%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     20)
-        wget "$IA/htMission%20Impossible%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMission%20Impossible%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     20)
-        wget "$IA/htMonster%20in%20My%20Pocket%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMonster%20in%20My%20Pocket%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     20)
-        wget "$IA/htMr.%20Gimmick%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/htMr.%20Gimmick%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     20)

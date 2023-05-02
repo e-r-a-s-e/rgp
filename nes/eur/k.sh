@@ -2,14 +2,8 @@
 #
 
 source sources/sources.rgp
-ROM=~/.cache/nesrom.zip
-NES="fceux --pal 1 $ROM"
+source variables.sh
 
-HEIGHT=19
-WIDTH=76
-CHOICE_HEIGHT=10
-BACKTITLE="Build 23.04"
-TITLE="Retro Game Pass"
 MENU="Nintendo Entertainment System Games"
 
 OPTIONS=(1 "Kabuki - Quantum Fighter" 
@@ -33,39 +27,39 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
     1)
-        wget "$IA/Kabuki%20-%20Quantum%20Fighter%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Kabuki%20-%20Quantum%20Fighter%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     2)
-        wget "$IA/Kick%20Off%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Kick%20Off%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     3)
-        wget "$IA/Kickle%20Cubicle%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Kickle%20Cubicle%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     4)
-        wget "$IA/Kid%20Icarus%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
+        wget "$DLNES/Kid%20Icarus%20%28Europe%29%20%28Rev%20A%29.zip" -O $ROM
         $NES
         ;;
     5)
-        wget "$IA/Kirby%27s%20Adventure%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Kirby%27s%20Adventure%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     6)
-        wget "$IA/Knight%20Rider%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Knight%20Rider%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     7)
-        wget "$IA/Konami%20Hyper%20Soccer%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Konami%20Hyper%20Soccer%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     8)
-        wget "$IA/Krusty%27s%20Fun%20House%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Krusty%27s%20Fun%20House%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     9)
-        wget "$IA/Kung%20Fu%20%28Europe%29.zip" -O $ROM
+        wget "$DLNES/Kung%20Fu%20%28Europe%29.zip" -O $ROM
         $NES
         ;;
     10)
